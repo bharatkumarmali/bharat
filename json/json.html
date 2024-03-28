@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // json data
+        let pg_jsonData = `[
+        {
+                "srNo" : 1,
+                "name" : "kuldeep prajapat",
+                "age" : 20,
+                "live" : "maruti pg C.G.road",
+                "mobileNo" : 1111111111,
+                "address" : "rajasthan"
+            },
+            {
+                "srNo" : 2,
+                "name" : "bharat mali",
+                "age" : 26,
+                "live" : "maruti pg C.G.road",
+                "mobileNo" : 2222222222,
+                "address" : "rajasthan"
+            },
+            {
+                "srNo" : 3,
+                "name" : "abhi patel",
+                "age" : 22,
+                "live" : "maruti pg C.G.road",
+                "mobileNo" : 3333333333,
+                "address" : "mahisagar"
+            },
+            {
+                "srNo" : 4,
+                "name" : "vivek chotaliya",
+                "age" : 24,
+                "live" : "maruti pg C.G.road",
+                "mobileNo" : 4444444444,
+                "address" : "rajkot"
+            },
+            {
+                "srNo" : 5,
+                "name" : "bhavik pranami",
+                "age" : 25,
+                "live" : "maruti pg C.G.road",
+                "mobileNo" : 5555555555,
+                "address" : "modasa"
+            }
+        ]`;
+
+        // convert json to object
+        let object_pg_jsonData = JSON.parse(pg_jsonData);
+
+        // print
+        for (let data of object_pg_jsonData) {
+
+            document.write(`<p> ${data.srNo}- My name is <b>${data.name}</b>. I am <b>${data.age}</b> years old. I am from <b>${data.address}</b>. And i live in <b>${data.live}</b>. My mobile no is <b>${data.mobileNo}</b>. <br>`)
+        }
+        document.write('<br><br>')
+
+        //============================================================================================================================================================
+
+
+        // object data
+        let pg_object = [
+            { srNo: 1, name: 'kuldeep prajapat', age: 20, mobileNo: 1111111111, address: 'rajasthan' },
+            { srNo: 2, name: 'bharat mali', age: 25, mobileNo: 2222222222, address: 'rajasthan' },
+            { srNo: 3, name: 'abhi patel', age: 22, mobileNo: 3333333333, address: 'rajkot' },
+            { srNo: 4, name: 'vivek chotaliya', age: 21, mobileNo: 4444444444, address: 'c.g. road' },
+            { srNo: 5, name: 'bhavik pranami', age: 24, mobileNo: 5555555555, address: 'rajkot' }
+        ];
+
+        // convert object to json
+        let json_pg_object = JSON.stringify(pg_object)
+        console.log(json_pg_object);
+
+        // convert json to object
+        let object_pgg = JSON.parse(json_pg_object)
+
+        // print
+        for (let data of object_pgg) {
+
+            document.write(`<p> ${data.srNo}- My name is <b>${data.name}</b>. I am <b>${data.age}</b> years old. My mobile no is <b>${data.mobileNo}</b>. I am from <b>${data.address}</b>. <br>`)
+        }
+        document.write('<br><br>')
+
+        //============================================================================================================================================================
+
+
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(res => res.json())  /* res - response*/
+            .then((obj) => console.log(obj));
+
+    </script>
+</body>
+
+</html>
