@@ -12,7 +12,7 @@
     <script>
 
         // json data
-        let pg_jsonData = `[
+        const pg_jsonData = `[
         {
                 "srNo" : 1,
                 "name" : "kuldeep prajapat",
@@ -56,10 +56,10 @@
         ]`;
 
         // convert json to object
-        let object_pg_jsonData = JSON.parse(pg_jsonData);
+        const object_pg_jsonData = JSON.parse(pg_jsonData);
 
         // print
-        for (let data of object_pg_jsonData) {
+        for (const data of object_pg_jsonData) {
 
             document.write(`<p> ${data.srNo}- My name is <b>${data.name}</b>. I am <b>${data.age}</b> years old. I am from <b>${data.address}</b>. And i live in <b>${data.live}</b>. My mobile no is <b>${data.mobileNo}</b>. <br>`)
         }
@@ -81,14 +81,7 @@
         let json_pg_object = JSON.stringify(pg_object)
         console.log(json_pg_object);
 
-        // convert json to object
-        let object_pgg = JSON.parse(json_pg_object)
-
-        // print
-        for (let data of object_pgg) {
-
-            document.write(`<p> ${data.srNo}- My name is <b>${data.name}</b>. I am <b>${data.age}</b> years old. My mobile no is <b>${data.mobileNo}</b>. I am from <b>${data.address}</b>. <br>`)
-        }
+        
         document.write('<br><br>')
 
         //============================================================================================================================================================

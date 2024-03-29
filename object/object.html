@@ -13,7 +13,7 @@
 
         let obj_Pg = { badNo: 101, name: "kuldeep", rantIs: 6000, mobileNo: 1234567890 };
 
-        document.write(obj_Pg.badNo + '' + obj_Pg.name + '' + obj_Pg.rantIs + '' + obj_Pg.mobileNo + '<br><br>');
+        document.write(obj_Pg.badNo + ' ' + obj_Pg.name + ' ' + obj_Pg.rantIs + ' ' + obj_Pg.mobileNo + '<br><br>');
 
         for (property in obj_Pg) {
             document.write(obj_Pg[property] + '<br>');
@@ -33,7 +33,7 @@
         document.write(obj_arr_pg[0].badNo + ' ' + obj_arr_pg[0].name + ' ' + obj_arr_pg[0].rantIs + ' ' + obj_arr_pg[0].mobileNo + '<br>')
 
         // short method 
-        for (data of obj_arr_pg) {
+        for (const data of obj_arr_pg) {
             document.write(data.badNo + ' ' + data.name + ' ' + data.rantIs + ' ' + data.mobileNo + '<br>')
         }
 
